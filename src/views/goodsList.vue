@@ -15,16 +15,12 @@
         </div>
         <div class="accessory-result">
           <!-- filter -->
-          <div class="filter stopPop" id="filter" :class="{'filterby-show': filterBy}">
+          <div class="filter stopPop" id="filter" :class="{'filterby-show':filterBy}">
             <dl class="filter-price">
               <dt>Price:</dt>
-              <dd><a href="javascript:void(0)"
-                     :class="{'cur': priceChecked =='all'}"
-                     @click="priceChecked='all'"
-              >All</a></dd>
+              <dd><a href="javascript:void(0)" :class="{'cur':priceChecked=='all'}" @click="priceChecked='all'">All</a></dd>
               <dd v-for="(price,index) in priceFilter" @click="setPricePop(index)">
-                <a href="javascript:void(0)"
-                   :class="{'cur': priceChecked==index}">
+                <a href="javascript:void(0)" :class="{'cur':priceChecked==index}">
                   {{price.startPrice}} - {{price.endPrice}}
                 </a>
               </dd>
